@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
@@ -11,8 +13,8 @@ io.on('connection', function(socket) {
     console.log('Someone has entered the chat room!');
 });
 
-app.use('/jquery',express.static('node_modules/jquery/dist/'))
-app.use('/socket',express.static('node_modules/socket.io-client/dist/'))
+app.use('/jquery',express.static('node_modules/jquery/dist/'));
+app.use('/socket',express.static('node_modules/socket.io-client/dist/'));
 
 
 app.use(express.static('public'));
